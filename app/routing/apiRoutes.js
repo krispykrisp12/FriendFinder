@@ -5,4 +5,14 @@ module.exports = function(app){
   app.get("/api/tables", function (req, res) {
     res.json(friends);
   })
+
+  app.post("/api/tables", function(req, res) {
+     if (friends.length) {
+      friends.push(req.body);
+      res.json();
+    }
+    
+    
+  });
+
 }

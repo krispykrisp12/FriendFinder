@@ -8,7 +8,8 @@ var PORT = process.env.PORT || 3000;
 // Defining express
 var app = express();
 // ============================================
-
+app.use("/app", express.static("./assets"))
+// app.use("/app/assets/img", express.static("./img"))
 // ============================================
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
